@@ -26,9 +26,9 @@ vpc_security_groups:
   - name: vpc
     description: "Allow internal traffic in the VPC"
     rules:
-      - proto: "all"
-        group_name: "vpc"
-        ports: "all"
+      - proto: tcp
+        group_name: vpc
+        ports: all
   - name: allow-public-ssh
     description: "Allow public SSH"
     rules:
