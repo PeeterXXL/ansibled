@@ -6,6 +6,7 @@
 - name: create internet gateway
   ec2_vpc_igw:
     vpc_id: "{{ vpc_id }}"
+    region: "{{ aws_region }}"
   register: create_gateway
 
 # create the NAT gateway, looking up the subnet ID by the human readable name: "private-a"
